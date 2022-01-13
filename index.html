@@ -11,6 +11,11 @@
             animation: fade ease-in 2s forwards;
         }*/
 
+        .card-img-top{
+            height: 200px;
+            object-fit: cover;
+        }
+
         .card-body p{
             animation: fade ease-in-out 1s forwards;
         }
@@ -23,9 +28,20 @@
             animation: color ease-in-out 2s forwards;
         }
         
+h1{
+    color: crimson;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    text-shadow: 10px 10px 2px rgb(234, 238, 243);
+}
+.display-4{
+    color: coral;
+    text-shadow: 8px 8px 2px rgb(206, 224, 247);
+}
+
         #favourite-albums h1{
     color: rgb(92, 255, 71);
-    text-align: center;
     margin-bottom: 20px;
     text-shadow: 10px 10px 2px rgb(234, 238, 243);
 
@@ -77,6 +93,19 @@
     left: 0.3rem;
     top: 0.3rem;
 }
+
+.row-a {
+    margin: auto;
+}
+
+.row-a:nth-of-type(2n ){
+    background-color: cornflowerblue;
+}
+.row-a:nth-of-type(2n +1){
+    background-color: rgb(99, 241, 211);
+}
+
+
     </style>
 
     <title>M2-D9</title>
@@ -178,19 +207,68 @@
 
         There should be a column for the track order number, one for the title and one for the track duration.
         (If you want, you can also add extra columns)
-    -->
-
-
-
     
-    <!-- EXERCISE 5
+         EXERCISE 5
         Add a DELETE bootstrap button at the end of each row of the tracklist. 
         Attach the functionality to remove its row when it gets clicked. (Requires DOM manipulation)  
 
-        ## EXTRA CSS CHALLENGE ##
-        Make only one button visible at a time, for each row, when the single row gets hovered. 
-        Animate it with a fade-in effect upon the user hovering and fade-out when he/she goes away from it.
-    -->
+           -->
+<table>
+<section class="album-tracklist">
+<h1>Album tracklist</h1>
+
+<div class="row ">
+    <div class="col-4"><h5>Track order</h5></div>
+    <div class="col-4"><h5>Title</h5></div>
+    <div class="col-4"><h5>Duration</h5></div>
+</div>
+
+
+<div class="row row-a">
+    <div class="col-4">1</div>
+    <div class="col-4">This is the title</div>
+    <div class="col-4">Duration: 00:03:00</div>
+</div>
+<button>Delete Row</button>
+<div class="row row-a">
+    <div class="col-4">2</div>
+    <div class="col-4">This is the title</div>
+    <div class="col-4">Duration: 00:03:00</div>
+</div>
+<button>Delete Row</button>
+<div class="row row-a">
+    <div class="col-4">3</div>
+    <div class="col-4">This is the title</div>
+    <div class="col-4">Duration: 00:03:00</div>
+</div>
+<button>Delete Row</button>
+<div class="row row-a">
+    <div class="col-4">4</div>
+    <div class="col-4">This is the title</div>
+    <div class="col-4">Duration: 00:03:00</div>
+</div>
+<button>Delete Row</button>
+<div class="row row-a">
+    <div class="col-4">5</div>
+    <div class="col-4">This is the title</div>
+    <div class="col-4">Duration: 00:03:00</div>
+</div>
+<button>Delete Row</button>
+<div class="row row-a">
+    <div class="col-4">6</div>
+    <div class="col-4">This is the title</div>
+    <div class="col-4">Duration: 00:03:00</div>
+</div>
+<button>Delete Row</button>
+
+
+
+</section>
+</table>
+
+   
+
+
 
     <!-- EXERCISE 6
         Add an "Add Track" button under the tracklist of the album. 
@@ -213,6 +291,12 @@
     <!-- ############### -->
     <!-- ###  EXTRA  ### -->
     <!-- ############### -->
+
+    <!--
+    ## EXTRA CSS CHALLENGE FOR EX 5##
+    Make only one button visible at a time, for each row, when the single row gets hovered. 
+    Animate it with a fade-in effect upon the user hovering and fade-out when he/she goes away from it.
+-->
 
     <!-- EXERCISE 8
         The modal should contain 2 buttons at the bottom:
