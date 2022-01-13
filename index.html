@@ -7,15 +7,76 @@
     
     <style>
 
-        .jumbotron {
-            animation: fade ease-in 2s;
+       /*.jumbotron {
+            animation: fade ease-in 2s forwards;
+        }*/
+
+        .card-body p{
+            animation: fade ease-in-out 1s forwards;
         }
 
-        @keyframes fade {
+        .card-body li{
+            animation: fade ease-in-out 1s forwards;
+        }
+
+        .card-body h5{
+            animation: color ease-in-out 2s forwards;
+        }
+        
+        #favourite-albums h1{
+    color: rgb(92, 255, 71);
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 10px 10px 2px rgb(234, 238, 243);
+
+}
+
+#favourite-albums{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card {
+    border: none;
+}
+
+.card-body{
+    display: none;
+}
+
+ .card:hover{
+
+    background: linear-gradient(180deg, rgba(158,239,255,1) 0%, rgba(222,123,245,1) 53%, rgba(119,111,255,1) 100%);
+}
+
+.card:hover .card-body{
+    display: block;
+}
+
+@keyframes fade {
             0% {opacity: 0;}
             100% {opacity: 1;}
         }
-        
+@keyframes color{
+    0%{color: black;}
+    100%{color: white;}
+}
+
+.card {
+    position: relative;
+}
+
+.card-badge {
+    position: absolute;
+    width: 5rem;
+    height: 1.5rem;
+    background-color: rgb(0, 94, 86);
+    text-align: center;
+    color: white;
+
+    left: 0.3rem;
+    top: 0.3rem;
+}
     </style>
 
     <title>M2-D9</title>
@@ -31,7 +92,7 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <h1 class="display-4">Strive Homework</h1>
-          <img src="https://static.fanpage.it/wp-content/uploads/sites/9/2019/07/everton-nuovo-stadio-mare-1200x675.jpeg" alt="image" style="width: 60%; ">
+          <img src="https://static.fanpage.it/wp-content/uploads/sites/9/2019/07/everton-nuovo-stadio-mare-1200x675.jpeg" alt="image" style="width: 40%; ">
           <p class="lead">This website is about CSS </p>
         </div>
       </div>
@@ -39,14 +100,77 @@
     <!-- EXERCISE 2
         Use a Bootstrap Card to contain every album in the favorite list you previously created.
         Use the elements of a card bootstrap provides you with to display nicely the album informations such as: album title, artist, year, etc..
-    -->
+   
+        AND
 
-
-
-
-    <!-- EXERCISE 3
+         EXERCISE 3
         Foreach album in the favorite list, place a badge on the top-left corner of the album with the genre of the music
     -->
+
+
+    <section id="favourite-albums">
+        <h1>Favourite albums</h1> 
+
+
+<div class="row  cols-xl-4 cols-lg-3 cols-md-3 cols-sm-2 cols-xs-2">
+   <div class="col">
+     <div class="card h-100">
+        <div class="card-badge">Rock</div>
+        <img src="https://www.rollingstone.it/wp-content/uploads/2021/10/RHCP-2-Photo-Credit_-Clara-Balzary.jpg" class="card-img-top " alt="...">              
+        <div class="card-body">
+         <h5 class="card-title">CALIFORNICATION - Red Hot Chilli Peppers</h5>
+         <p class="card-text">An album of 30 songs</p>
+       <li class="card-text">15 songs - 127 minutes</li>
+       <li class="card-text">Rock</li>
+       <li class="card-text">Song1, Song2, Song3, Song4...</li>
+    </div>
+     </div>
+   </div>
+   <div class="col">
+     <div class="card h-100">
+        <div class="card-badge">Pop</div>
+       <img src="https://www.viagginews.com/wp-content/uploads/2019/08/78243ec6-e412-4bf6-97af-d02a4951cb91_large.jpg" class="card-img-top" alt="...">
+       <div class="card-body">
+         <h5 class="card-title">IL TUO MONDO - Claudio Villa</h5>
+         <p class="card-text">An album of 22 songs</p>
+       <li class="card-text">11 songs - 904 minutes</li>
+       <li class="card-text">Pop</li>
+       <li class="card-text">Song1, Song2, Song3, Song4...</li>
+       </div>
+     </div>
+   </div>
+   <div class="col">
+     <div class="card h-100">
+        <div class="card-badge">Trap</div>
+       <img src="https://i.ytimg.com/vi/kTJczUoc26U/maxresdefault.jpg" class="card-img-top" alt="...">
+       <div class="card-body">
+         <h5 class="card-title">STAY - Justin Bieber</h5>
+         <p class="card-text">An album of 17 songs</p>
+       <li class="card-text">49 songs - 5674 minutes</li>
+       <li class="card-text">Trap</li>
+       <li class="card-text">Song1, Song2, Song3, Song4...</li>
+     </div>
+     </div>
+   </div>
+   <div class="col">
+     <div class="card h-100">
+         <div class="card-badge">Rock</div>
+       <img src="http://corsiinglesemilano.eu/wp-content/uploads/Imagine-Dragons-Believer.jpg" class="card-img-top" alt="...">
+       <div class="card-body">
+         <h5 class="card-title">BELIEVER - Imagine Dragons</h5>
+         <p class="card-text">An album of 12 songs</p>
+       <li class="card-text">4 songs - 65 minutes</li>
+       <li class="card-text">Rock</li>
+       <li class="card-text">Song1, Song2, Song3, Song4...</li>
+       </div>
+     </div>
+   </div>
+ </div>
+
+</section>
+
+
+
 
     <!-- EXERCISE 4
         Create a new section with an album tracklist inside a Bootstrap table.
@@ -56,6 +180,9 @@
         (If you want, you can also add extra columns)
     -->
 
+
+
+    
     <!-- EXERCISE 5
         Add a DELETE bootstrap button at the end of each row of the tracklist. 
         Attach the functionality to remove its row when it gets clicked. (Requires DOM manipulation)  
