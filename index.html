@@ -244,38 +244,44 @@ h1{
     <div class="col-4">1</div>
     <div class="col-4">This is the title</div>
     <div class="col-4">Duration: 00:03:00</div>
+    <button class="deletion-button" onclick="deleteRow()">Delete Row</button>
 </div>
-<button class="deletion-button" onclick="deleteRow()">Delete Row</button>
+
 <div class="row row-a">
     <div class="col-4">2</div>
     <div class="col-4">This is the title</div>
     <div class="col-4">Duration: 00:03:00</div>
-</div>
 <button class="deletion-button" onclick="deleteRow()">Delete Row</button>
+</div>
+
 <div class="row row-a">
     <div class="col-4">3</div>
     <div class="col-4">This is the title</div>
     <div class="col-4">Duration: 00:03:00</div>
-</div>
 <button class="deletion-button" onclick="deleteRow()">Delete Row</button>
+
+</div>
 <div class="row row-a">
     <div class="col-4">4</div>
     <div class="col-4">This is the title</div>
     <div class="col-4">Duration: 00:03:00</div>
-</div>
 <button class="deletion-button" onclick="deleteRow()">Delete Row</button>
+
+</div>
 <div class="row row-a">
     <div class="col-4">5</div>
     <div class="col-4">This is the title</div>
     <div class="col-4">Duration: 00:03:00</div>
-</div>
 <button class="deletion-button" onclick="deleteRow()">Delete Row</button>
+
+</div>
 <div class="row row-a">
     <div class="col-4">6</div>
     <div class="col-4">This is the title</div>
     <div class="col-4">Duration: 00:03:00</div>
-</div>
 <button class="deletion-button" onclick="deleteRow()">Delete Row</button>
+
+</div>
 
 
 
@@ -341,11 +347,15 @@ h1{
 
 <script>
 
-
-
-
-
-
+function deleteRow () {
+    
+    let buttons = document.querySelectorAll(".deletion-button")
+let i = 0
+    if(buttons[i].parentElement){
+        buttons[i].parentElement.remove()
+    } 
+    
+}
 
 
 
